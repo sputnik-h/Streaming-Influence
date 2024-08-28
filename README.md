@@ -1,4 +1,4 @@
-# Twitch Streaming and Steam Game Player Activity Causal Inference
+# Streaming Influence: Analyzing the Causal Impact of Twitch Viewership on Active Player Engagement
 ## Description
 This project aims to analyze the causal relationship between a game’s Twitch viewership and its active player engagement, using Tom Clancy’s Rainbow Six Siege as the primary case study. The analysis extends to other popular online multiplayer shooting games, such as Counter-Strike 2 and Rust.
 
