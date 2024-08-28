@@ -27,7 +27,7 @@ Causal Discovery Using Model Invariance (CDMI) in the project is based on resear
 To setup the environment used in this project:
 
 1. Download and unzip cdmi-main.rar
-2. Install dependencies: `pip install -r requirements.txt`
+2. Install dependencies: `pip install -r requirements.txt` (Python Version 3.11.7)
 3. Set up environment variables if necessary.
 
 ## Other Contributors
