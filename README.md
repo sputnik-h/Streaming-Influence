@@ -23,6 +23,7 @@ Please see [DSO 585 Project Presentation-compressed.pdf](https://github.com/sput
 ## Environment Setup (for CDMI) and Installaion 
 
 Causal Discovery Using Model Invariance (CDMI) in the project is based on research by [Wasim Ahmad, Maha Shadaydeh, and Joachim Denzler from the Friedrich Schiller University Jena](https://arxiv.org/pdf/2207.04055).
+
 To setup the environment used in this project:
 
 1. Download and unzip cdmi-main.rar
