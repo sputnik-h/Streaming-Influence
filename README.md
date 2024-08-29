@@ -1,4 +1,4 @@
-# Streaming Effect: Analyzing the Causal Relationship Between Active Players and Twitch Viewership
+# Streaming Effect: Analyzing the Causal Impact of Twitch Viewership on Active Player Engagement
 
 This project investigates the causal relationship between Twitch viewership and active player engagement for popular online multiplayer games, using advanced time series analysis techniques. Our main objective is to understand how Twitch viewership impacts the number of active players in games like Rainbow Six Siege, Counter-Strike 2, and Rust.
 
