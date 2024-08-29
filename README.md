@@ -19,7 +19,7 @@ The project aims to explore how Twitch viewership influences active player engag
 
 ## Data Collection
 
-Due to limited access to Twitch and Steam APIs, data was collected from two third-party sources, SteamDB and Sullygnome. These platforms provided daily metrics such as player counts, Twitch viewership statistics, and additional variables like game pricing, discounts, events, and tournaments, which were used to account for confounding factors.
+Due to limited access to Twitch and Steam APIs, data was collected from two third-party sources, [SteamDB](https://steamdb.info/) and [Sullygnome](https://sullygnome.com/). These platforms provided daily metrics such as player counts, Twitch viewership statistics, and additional variables like game pricing, discounts, events, and tournaments, which were used to account for confounding factors.
 
 ## Methodology
 
