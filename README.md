@@ -58,9 +58,9 @@ Due to limited access to Twitch and Steam APIs, data was collected from two thir
 
 ## Contributors
 
-- **Chun Yat (Jeco) Cheung**
-- **Yixuan (Ethan) Liu**
-- **Yu (Sherry) Shi**
+- Chun Yat (Jeco) Cheung
+**- Yixuan (Ethan) Liu (Casual Inference, Granger Casuality Test, CDMI, LPCMIC)**
+- Yu (Sherry) Shi
 
 ## Acknowledgments
 
