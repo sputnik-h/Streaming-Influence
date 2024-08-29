@@ -35,7 +35,7 @@ Due to limited access to Twitch and Steam APIs, data was collected from two thir
 
 1. **Linear Regression**: Initial model to identify basic associations between variables.
 2. **Granger Causality Test**: Used to test the predictability of Twitch viewers on player counts.
-3. **Causal Discovery Using Model Invariance (CDMI)**: A novel approach using knockoffs to identify causal links.
+3. **Causal Discovery Using Model Invariance (CDMI)**: A novel approach using knockoffs to identify causal links proposed by [Wasim Ahmad, Maha Shadaydeh, Joachim Denzler](https://arxiv.org/pdf/2207.04055).
 4. **Latent Peter and Clark Momentary Conditional Independence (LPCMCI)**: An advanced method to detect and estimate causal relationships in time series data, leveraging the TIGRAMITE library.
 
 ## Results
