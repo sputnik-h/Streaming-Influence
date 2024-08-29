@@ -1,36 +1,71 @@
-# Streaming Influence: Analyzing the Causal Impact of Twitch Viewership on Active Player Engagement
-## Description
-This project aims to analyze the causal relationship between a game’s Twitch viewership and its active player engagement, using Tom Clancy’s Rainbow Six Siege as the primary case study. The analysis extends to other popular online multiplayer shooting games, such as Counter-Strike 2 and Rust.
+# Analyzing the Causal Relationship Between Active Players and Twitch Viewership
 
-In February 2024, Ubisoft's Six Invitational 2024 event set a record for the highest peak Twitch viewership, which was followed by a significant increase in the average player count for Rainbow Six Siege. This observation led to the hypothesis that Twitch viewership can influence player engagement, providing valuable insights for gaming companies to refine their marketing strategies.
+This project investigates the causal relationship between Twitch viewership and active player engagement for popular online multiplayer games, using advanced time series analysis techniques. Our main objective is to understand how Twitch viewership impacts the number of active players in games like Rainbow Six Siege, Counter-Strike 2, and Rust.
 
-**Key Highlights:**
+## Table of Contents
+- [Introduction](#introduction)
+- [Data Collection](#data-collection)
+- [Methodology](#methodology)
+- [Models Used](#models-used)
+- [Results](#results)
+- [Recommendations](#recommendations)
+- [Limitations](#limitations)
+- [Contributors](#contributors)
+- [Acknowledgments](#acknowledgments)
 
-**Objective:** Investigate how Twitch viewership impacts active player engagement.
+## Introduction
 
-**Games Analyzed:** Tom Clancy’s Rainbow Six Siege, Counter-Strike 2, and Rust.
+The project aims to explore how Twitch viewership influences active player engagement. This analysis is crucial for gaming companies to strategize their marketing efforts and optimize player retention and acquisition through Twitch. Our primary case study is Tom Clancy’s Rainbow Six Siege, with comparisons to Counter-Strike 2 and Rust.
 
-**Methodologies:** Linear Regression, Granger Causality Test, Causal Discovery Using Model Invariance (CDMI), and Latent Peter and Clark Momentary Conditional Independence (LPCMCI).
+## Data Collection
 
-**Data Sources:** Data was gathered from third-party websites, SteamDB and Sullygnome, due to limited access to historical data from official Twitch and Steam APIs.
+Due to limited access to Twitch and Steam APIs, data was collected from two third-party sources, SteamDB and Sullygnome. These platforms provided daily metrics such as player counts, Twitch viewership statistics, and additional variables like game pricing, discounts, events, and tournaments, which were used to account for confounding factors.
 
-**Findings:** The analysis suggests a causal relationship between increased Twitch viewership and higher player engagement, with varying time delays depending on the game.
+## Methodology
 
-This project provides a framework for understanding the influence of live-streaming platforms on gaming communities, offering actionable recommendations for game developers and marketers to enhance player engagement through strategic Twitch collaborations.
+### Data Preprocessing
+- **Stationarity**: Applied Augmented Dickey-Fuller tests, first-differencing, and deseasonalization to ensure data stationarity.
+- **Lag Analysis**: Created lagged variables to capture delayed effects between Twitch viewership and player engagement.
 
-Please see [DSO 585 Project Presentation-compressed.pdf](https://github.com/sputnik-h/Twitch-x-Steam/blob/main/DSO%20585%20Project%20Presentation-compressed.pdf) and [DSO 585 Team 2 Final Report.pdf](https://github.com/sputnik-h/Twitch-x-Steam/blob/main/DSO%20585%20Team%202%20Final%20Report.pdf) for further details about the project
+### Exploratory Data Analysis (EDA)
+- Visualized trends and seasonality in player counts and Twitch viewership.
+- Examined correlations to identify potential causal links.
 
-## Environment Setup (for CDMI) and Installaion 
+## Models Used
 
-Causal Discovery Using Model Invariance (CDMI) in the project is based on research by [Wasim Ahmad, Maha Shadaydeh, and Joachim Denzler from the Friedrich Schiller University Jena](https://arxiv.org/pdf/2207.04055).
+1. **Linear Regression**: Initial model to identify basic associations between variables.
+2. **Granger Causality Test**: Used to test the predictability of Twitch viewers on player counts.
+3. **Causal Discovery Using Model Invariance (CDMI)**: A novel approach using knockoffs to identify causal links.
+4. **Latent Peter and Clark Momentary Conditional Independence (LPCMCI)**: An advanced method to detect and estimate causal relationships in time series data, leveraging the TIGRAMITE library.
 
-To setup the environment used in this project:
+## Results
 
-1. Download and unzip cdmi-main.rar
-2. Install dependencies: `pip install -r requirements.txt` (Python Version 3.11.7)
-3. Set up environment variables if necessary.
+- **Rainbow Six Siege**: Found significant positive effects of Twitch viewership on player engagement with a lag of 1 to 14 days.
+- **Counter-Strike 2**: Limited causal impact from Twitch viewership, likely due to its established player base predating Twitch.
+- **Rust**: Identified positive causal links with a conversion ratio of up to 4% from Twitch viewership to active players.
 
-## Other Contributors
+## Recommendations
 
-- **[Jeco (Chun Yat) Cheung](https://www.linkedin.com/in/jecocheung/)** 
-- **[Yu (Sherry) Shi](https://www.linkedin.com/in/sherryshi91/)** 
+1. **Focus on Top Streamers and Tournaments**: For games like Rainbow Six Siege, collaborating with top streamers and organizing tournaments significantly boosts Twitch viewership and player engagement.
+2. **Leverage Streaming Platforms as Feedback Channels**: Use insights from streamers and Twitch chat interactions to guide game updates and improve player satisfaction.
+3. **Tailor Marketing Strategies**: Develop game-specific marketing strategies based on the causal impact of Twitch viewership observed.
+
+## Limitations
+
+- Lack of true experimental data to establish definitive causal relationships.
+- Limited behavioral and demographic data on players and viewers.
+- Model complexity and pruning in LPCMCI may affect causal effect estimations.
+
+## Contributors
+
+- **Chun Yat (Jeco) Cheung**
+- **Yixuan (Ethan) Liu**
+- **Yu (Sherry) Shi**
+
+## Acknowledgments
+
+Special thanks to Prof. Austin Pollok for guidance and support throughout this project.
+
+---
+
+This project was completed as part of the DSO 585 course at USC Marshall School of Business.
